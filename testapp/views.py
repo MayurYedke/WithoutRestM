@@ -12,7 +12,7 @@ class EmployeeDetailCBV(View,HttpResponseMixin):
         try:
 
             emp =  Employee.objects.get(id=id)
-            a=5
+            tempvariable=5
         except Employee.DoesNotExist:
             json_data = json.dumps({'msg':'Employee not found'})
             return self.render_http_response(json_data,status=404)
